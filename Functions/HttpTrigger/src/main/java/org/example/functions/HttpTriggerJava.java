@@ -29,4 +29,23 @@ public class HttpTriggerJava {
             return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name).build();
         }
     }
+
+    @FunctionName("HttpTriggerJavaVersion")
+    public static HttpResponseMessage HttpTriggerJavaVersion(
+            @HttpTrigger(
+                    name = "req",
+                    methods = {HttpMethod.GET, HttpMethod.POST},
+                    authLevel = AuthorizationLevel.ANONYMOUS)
+            HttpRequestMessage<Optional<String>> request,
+            final ExecutionContext context
+    ) {
+        context.getLogger().info("Java HTTP tri1gger processed a request.");
+        final String javaVersion = getJavaVersion();
+        context.getLogger().info("Function - HttpTriggerJavaVersion" + javaVersion);
+        return request.createResponseBuilder(HttpStatus.OK).body("HttpTriggerJavaVersion").build();
+    }
+
+    public static String getJavaVersion() {
+        return String.join(" - ", System.getProperty("java.home"), System.getProperty("java.version"));
+    }
 }
