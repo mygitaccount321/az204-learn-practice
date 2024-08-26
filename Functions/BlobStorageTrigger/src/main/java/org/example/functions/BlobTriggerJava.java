@@ -13,10 +13,11 @@ public class BlobTriggerJava {
     @FunctionName("BlobTriggerJava")
 //    @StorageAccount(value = "az204learnstorage")
     public void run(
-        @BlobTrigger(name = "content", path = "mycontainer/{name}", dataType = "binary") byte[] content,
+        @BlobTrigger(name = "content", path = "mycontainer1/{name}.{blobextension}", dataType = "binary") byte[] content,
         @BindingName("name") String name,
+        @BindingName("blobextension") String blobextension,
         final ExecutionContext context
     ) {
-        context.getLogger().info("Java Blob trigger function processed a blob. Name: " + name + "\n  Size: " + content.length + " Bytes");
+        context.getLogger().info("Java Blob trigger function processed a blob. Name: " + name +"."+blobextension+ "\n  Size: " + content.length + " Bytes");
     }
 }
