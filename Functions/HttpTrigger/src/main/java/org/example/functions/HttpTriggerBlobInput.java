@@ -41,8 +41,9 @@ public class HttpTriggerBlobInput {
             byte[] content,
             @BlobOutput(
                     name = "target",
-                    path = "myblob/{Query.file}-CopyViaHttp",
-                    connection = "AzureWebJobsStorage")
+                    //https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-expressions-patterns
+                    path = "myblob/{rand-guid}-{DateTime}-{Query.file}-CopyViaHttp",
+                    connection = "Myblob")
             OutputBinding<String> outputItem,
             final ExecutionContext context) {
 

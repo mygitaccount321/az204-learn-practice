@@ -1,0 +1,23 @@
+{
+  "version": "2.0",
+  //Please refer this doc for http extention : https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook?tabs=isolated-process%2Cfunctionsv2&pivots=programming-language-java
+  "extensions": {
+    "http": {
+      "routePrefix": "my-api",
+      "maxOutstandingRequests": 200,
+      "maxConcurrentRequests": 100,
+      "dynamicThrottlesEnabled": true,
+      "hsts": {
+        "isEnabled": true,
+        "maxAge": "10"
+      },
+      "customHeaders": {
+        "X-Content-Type-Options": "nosniff"
+      }
+    }
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.*, 5.0.0)"
+  } 
+}
