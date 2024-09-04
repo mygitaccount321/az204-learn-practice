@@ -1,8 +1,8 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=az204learnstorage;AccountKey=IyA3Z8HwAqNeNBOoNND8SNTZFCArpVJLG6QuiUCQ7T0FsNdRu/DwZWFT7WkMkET1+kSo+8PyH24I+ASt3Wb3UA==;EndpointSuffix=core.windows.net",
-    "Myblob": "DefaultEndpointsProtocol=https;AccountName=az204learnstorage;AccountKey=IyA3Z8HwAqNeNBOoNND8SNTZFCArpVJLG6QuiUCQ7T0FsNdRu/DwZWFT7WkMkET1+kSo+8PyH24I+ASt3Wb3UA==;EndpointSuffix=core.windows.net",
+    "AzureWebJobsStorage": "test",
+    "Myblob": "test",
     "FUNCTIONS_WORKER_RUNTIME": "java"
   }
 }
