@@ -1,8 +1,8 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "test",
-    "Myblob": "test1",
+    "AzureWebJobsStorage": "",
+    "COSMOSDB_CONNECTION_DEV": "tes1t",
     "FUNCTIONS_WORKER_RUNTIME": "java"
   }
 }
