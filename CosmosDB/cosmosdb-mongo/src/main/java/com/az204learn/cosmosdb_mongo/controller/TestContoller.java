@@ -1,7 +1,7 @@
-package com.az204learn.cosmosdb_nosql.controller;
+package com.az204learn.cosmosdb_mongo.controller;
 
-import com.az204learn.cosmosdb_nosql.models.Student;
-import com.az204learn.cosmosdb_nosql.repository.StudentRepository;
+import com.az204learn.cosmosdb_mongo.model.Student;
+import com.az204learn.cosmosdb_mongo.repository.StudentRepository;
 import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,6 @@ public class TestContoller {
     @Autowired
     private StudentRepository studentRepository;
 
-
     @GetMapping("check")
     public String check() {
         return "Hi Cosmos DB";
@@ -27,7 +26,6 @@ public class TestContoller {
         studentRepository.save(student);
         return student;
     }
-
 
     @PutMapping("/student")
     public Student createstionUpdate(@RequestBody Student student) {
@@ -42,6 +40,7 @@ public class TestContoller {
 
     @GetMapping("/students")
     public List<Student> getAllStudentInGrade(@PathParam("grade") String grade) {
-        return studentRepository.getAllStudentInGrade(grade);
+//        return studentRepository.getAllStudentInGrade(grade);
+        return  null;
     }
 }

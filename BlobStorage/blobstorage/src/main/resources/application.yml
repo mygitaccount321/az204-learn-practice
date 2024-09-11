@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: blobstorage
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-name: az204learnstorage
+          account-key: test
+          enabled: true
+server:
+  port: 8081
+
+

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: cosmosdb-mongo
+  data:
+    mongodb:
+      uri: "test"
+      database: "college"
+      auto-index-creation: true
+
+server:
+  port: 8083
+
