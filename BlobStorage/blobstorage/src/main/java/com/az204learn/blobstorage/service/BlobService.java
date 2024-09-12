@@ -18,7 +18,7 @@ public class BlobService {
 
 
     @Autowired
-    @Qualifier("testBlobContainerClient1")
+    @Qualifier("testBlobContainerClient")
     private BlobContainerClient blobContainerClient;
 
 //    https://az204learnstorage.blob.core.windows.net/testcontainer/Dockerfile.txt
