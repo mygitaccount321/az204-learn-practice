@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: blobsas
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-name: az204learnstorage
+#          connection-string: test
+
+server:
+  port: 8082

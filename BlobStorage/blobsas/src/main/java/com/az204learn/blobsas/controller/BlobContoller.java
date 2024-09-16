@@ -1,6 +1,6 @@
-package com.az204learn.blobstorage.contoller;
+package com.az204learn.blobsas.controller;
 
-import com.az204learn.blobstorage.service.BlobService;
+import com.az204learn.blobsas.service.BlobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,19 +14,8 @@ import java.io.IOException;
 @RestController
 public class BlobContoller {
 
-
     @Autowired
     private BlobService blobService;
-
-    @GetMapping("check")
-    public String check() {
-        return "Hi Blob Storage1";
-    }
-
-    @GetMapping("/blobexist")
-    public Boolean isBlobExist(String blobname) {
-        return blobService.isBlobExist(blobname);
-    }
 
     @GetMapping("/content")
     public String downloadFile(String blobname) throws IOException {
@@ -42,15 +31,5 @@ public class BlobContoller {
         String fileName = file.getOriginalFilename();
         blobService.writeBlobFile(file);
         return ResponseEntity.ok("File uploaded successfully: " + fileName);
-    }
-
-    @GetMapping("/setproperties")
-    public void setProperties(String blobname) {
-        blobService.setProperties(blobname);
-    }
-
-    @GetMapping("/readBlobMetadata")
-    public void readBlobMetadata(String blobname) {
-        blobService.readBlobMetadata(blobname);
     }
 }
