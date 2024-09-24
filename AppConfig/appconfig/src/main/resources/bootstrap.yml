@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: appconfig
+  cloud:
+    azure:
+      appconfiguration:
+        enabled: true
+        stores:
+          - connectionString: test
