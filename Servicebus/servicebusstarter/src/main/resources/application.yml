@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: servicebusstarter
+
+server:
+  port: 8089
+

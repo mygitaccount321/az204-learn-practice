@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: servicebus
+  jms:
+    servicebus:
+      namespace: az204learnsb
+      pricing-tier: Standard
+#      passwordless-enabled: true
+      topic-client-id: 123
+      connection-string: 344
+    listener:
+      receive-timeout: 60000
+server:
+  port: 8088
+
+
+
+
